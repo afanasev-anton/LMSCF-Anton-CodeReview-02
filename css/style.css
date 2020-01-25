@@ -133,7 +133,7 @@ body {
   background-color: black;
   color: white; }
 
-#content > a {
+#banner-hor {
   margin: 15px 0; }
 
 .con-wrap {
@@ -153,9 +153,7 @@ body {
   margin: 0 0 15px; }
 
 #banner-mob {
-  display: none;
-  height: 100%;
-  overflow: hidden; }
+  display: none; }
 
 #banner-mob img {
   width: 100%; }
@@ -163,6 +161,9 @@ body {
 .pic-hide {
   display: none; }
 
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  #banner {
+    display: none; } }
 @media screen and (max-width: 480px) {
   #header {
     height: 80px; }
@@ -184,7 +185,7 @@ body {
 
   #footer img {
     margin: 10px 20px 0;
-    float: top; }
+    float: none; }
 
   #banner {
     display: none; }
@@ -200,7 +201,9 @@ body {
     display: none; }
 
   #banner-mob {
-    display: block; }
+    display: block;
+    height: 100%;
+    overflow: hidden; }
 
   .pic-hide {
     display: flex;

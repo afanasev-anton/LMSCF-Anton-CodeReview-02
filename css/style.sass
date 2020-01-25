@@ -126,7 +126,7 @@ body
 	background-color: black
 	color: white
 //wide banner
-#content > a
+#banner-hor
 	margin: 15px 0
 //second part with pictures and banner aside
 .con-wrap
@@ -140,13 +140,16 @@ body
 //invisible banners and pictures
 #banner-mob
 	display: none
-	height: 100%
-	overflow: hidden
 #banner-mob img
 	width: 100%
 .pic-hide
 	display: none
 //Media Queries
+//tablets
+@media screen and (min-width: 481px) and (max-width: 1024px)
+	#banner
+		display: none
+//mobile devises
 @media screen and (max-width: 480px)
 	#header
 		height: 80px
@@ -162,7 +165,7 @@ body
 		height: 120px
 	#footer img
 		margin: 10px 20px 0
-		float: top
+		float: none
 	#banner
 		display: none
 	#banner-hor
@@ -174,6 +177,8 @@ body
 		display: none
 	#banner-mob
 		display: block
+		height: 100%
+		overflow: hidden
 	.pic-hide
 		@include flexbox (nowrap,align-items,center,column)
 		min-width: 104px
