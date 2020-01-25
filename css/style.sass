@@ -1,0 +1,148 @@
+//colors
+$color-header: #601A1C
+$color-navBar: black
+//window sizes (1536px - max window size)
+$size-main: 1024px
+//fonts
+$font:'Chivo'
+$font-color-nav: white
+$font-size-nav: 140%
+//function for flexing
+@mixin flexbox ($wrapp,$pos,$value,$dir)
+	display: flex
+	flex-wrap: $wrapp
+	#{$pos}: $value
+	flex-direction: $dir
+
+body
+	//max-width: 75%
+	font-family: $font, sans-serif
+	display: flex
+	flex-flow: column
+	align-items: center
+//main header
+#header
+	height: 110px
+	width: 100%
+	//max-width: 1024px
+	margin: 0
+	display: flex
+	justify-content: space-between
+	align-items: center
+	background-color: $color-header
+#header img
+	margin: auto 20px
+//navigation bar
+#nav
+	display: flex
+	justify-content: flex-start
+	list-style-type: none
+	width: 100%
+	margin: 0
+	padding: 0
+	overflow: hidden
+	background-color: $color-navBar
+#nav li
+	display: flex
+	align-items: center
+	margin: 0
+	height: 50px
+#nav a
+	padding: 20px
+	color: $font-color-nav
+	font-size: $font-size-nav
+	text-decoration: none
+#nav a:hover
+	background-color: white
+	color: black
+//footer navigation bar
+#nav-small
+	@extend #nav
+	margin: 20px 0 0 0
+#nav-small a
+	font-size: 100%
+//Footer
+#footer
+	height: 150px
+	width: 100%
+	margin: 0
+	padding: auto
+	background-color: black
+#footer img
+	margin: 0 20px
+	float: right
+#footer h4
+	position: relative
+	top: 80%
+	margin: 0
+	text-align: center
+	color: white
+//main content
+#content
+	@include flexbox (nowrap,align-items,center,column)
+	width: 95%
+	margin: 0
+	padding: 0
+	overflow: hidden
+//bar with actual date
+#date
+	width: 100%
+	text-align: right
+	padding: 10px 0
+//part with pictures and subheaders
+.header-small
+	width: 100%
+	background-color: #DDDDDD
+	font-size: $font-size-nav
+	text-align: left
+	margin: 0 0 10px
+.container
+	width: 100%
+	@include flexbox (nowrap,justify-content,space-between,row)
+.con-small
+	@include flexbox (nowrap,justify-content,flex-start,column)
+	width: 100%
+#banner
+	min-width: 104px
+	//max-width: 208px
+	margin: 0 0 0 10px
+#banner img
+	width: 100%
+//pictures with description
+.pic
+	@include flexbox (nowrap,align-items,center,column)
+	min-width: 240px
+	width: 30%
+	margin: 0 0 15px
+.pic-window
+	height: 78%
+	overflow: hidden
+.pic-window img
+	width: 100%
+	//height: 100%
+	margin: 0
+.description
+	width: 100%
+	height: 22%
+	text-align: center
+	background-color: black
+	color: white
+//wide banner
+#content > a
+	margin: 15px 0
+//second part with pictures and banner aside
+.con-wrap
+	@include flexbox (wrap,justify-content,space-between,row)
+	width: 100%
+.pic-big
+	@include flexbox (nowrap,align-items,center,column)
+	min-width: 240px
+	width: 45%
+	margin: 0 0 15px
+//invisible banners
+#banner-mob
+	display: none
+	height: 100%
+	overflow: hidden
+#banner-mob img
+	width: 100%
