@@ -161,6 +161,11 @@ body {
 .pic-hide {
   display: none; }
 
+.con-wrap iframe {
+  max-width: 560px;
+  max-height: 315px;
+  margin: 10px 0; }
+
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   #banner {
     display: none; } }
