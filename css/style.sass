@@ -15,7 +15,6 @@ $font-size-nav: 140%
 	flex-direction: $dir
 
 body
-	//max-width: 75%
 	font-family: $font, sans-serif
 	display: flex
 	flex-flow: column
@@ -24,7 +23,6 @@ body
 #header
 	height: 110px
 	width: 100%
-	//max-width: 1024px
 	margin: 0
 	display: flex
 	justify-content: space-between
@@ -136,13 +134,48 @@ body
 	width: 100%
 .pic-big
 	@include flexbox (nowrap,align-items,center,column)
-	min-width: 240px
+	min-width: 300px
 	width: 45%
 	margin: 0 0 15px
-//invisible banners
+//invisible banners and pictures
 #banner-mob
 	display: none
 	height: 100%
 	overflow: hidden
 #banner-mob img
 	width: 100%
+.pic-hide
+	display: none
+//Media Queries
+@media screen and (max-width: 480px)
+	#header
+		height: 80px
+	#header > a
+		display: none
+	#nav
+		justify-content: center
+	#nav a
+		padding: 6px
+	#nav-small
+		justify-content: center
+	#footer
+		height: 120px
+	#footer img
+		margin: 10px 20px 0
+		float: top
+	#banner
+		display: none
+	#banner-hor
+		display: none
+	.pic
+		min-width: 104px
+		width: 45%
+	.pic-big
+		display: none
+	#banner-mob
+		display: block
+	.pic-hide
+		@include flexbox (nowrap,align-items,center,column)
+		min-width: 104px
+		width: 45%
+		margin: 0 0 15px
